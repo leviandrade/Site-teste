@@ -1,0 +1,87 @@
+# voxusprojeto
+<!doctype html>
+<html>
+<!--formulario.html -->
+  <head>
+	  <meta charset="utf-8" />
+	  <title>Formulário PHP</title>
+  </head>
+  <body>
+  <p>
+   <h1>Formulário</h1>
+    <div id="formu">
+	<form name="form1" method="POST" action="insere.php" onsubmit="return validar();">
+		<p>código:</p>
+		<p></label> <input type="text" name="codigo" id="codigo"/></p>
+		<p>nome:</p>
+		<p></label><input type="text" name="nome" id="nome"/></p>
+		<p>descrição:</p>
+		<p></label> <input type="text" name="descricao" id="descricao"/></p>
+		<p>arquivo:</p> 
+		<p></label><input type="file" name="arquivo" id="arquivo"/></p>
+		<input type="submit"   value="enviar"  />
+	</form>
+	</div>
+	</p>
+	<p>
+	<div id="consul">
+	
+	<form name="form2" method="POST" action="consulta.php" onsubmit="">
+		<p><h1 id="con">Consultar cadastros</h1><input type="submit"   value="CONSULTAR" id="consultar" /></p>
+	</form>
+	</div></p>
+	<script>
+	  function validar(){
+	  if (document.form1.codigo.value==""){
+	  alert("por favor preencha todos os campos");
+	  
+	  document.form1.codigo.select( );
+	  document.form1.codigo.focus();
+	  return false;
+	  }
+	  else if (document.form1.nome.value==""){
+	  alert("por favor preencha todos os campos");
+	  
+	  document.form1.nome.select( );
+	  document.form1.nome.focus();
+	  return false;
+	  }
+	  else if (document.form1.descricao.value==""){
+	  alert("por favor preencha todos os campos");
+	  
+	  document.form1.descricao.select( );
+	  document.form1.descricao.focus();
+	  return false;
+	  }
+	  }
+	 </script>
+	
+	<style>
+	#formu{
+	border:solid;padding-left:15px;padding-right:300px;;line-height:20px;padding-bottom:20px; line-height:4%;
+	}
+	#c{color:white;}
+	h1{color:white;}
+	#formu{float:left;widht:600px;
+	background-color:#4F4F4F;
+	}
+	body{background-color:#1C1C1C;}
+	#enviar{background:#000000;    color:#ffffff;}
+	#consultar{background:#000000; color:#ffffff;}
+	#codigo,#nome,#descricao{border: 1px solid #000000;
+	background:#cccccc;
+	width:200px;
+	height:25px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	box-shadow: 1px 1px 2px #333333;	
+	-moz-box-shadow: 1px 1px 2px #333333;
+	-webkit-box-shadow: 1px 1px 2px #333333;}
+	#descricao{width:200px;
+	height:100px;}
+
+	</style>
+	
+</body>
+</html>
